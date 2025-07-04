@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservierung erfolgreich</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Reservierung erfolgreich gespeichert ✅</h1>
+
+<p><strong>Private Key (zum Bearbeiten oder Löschen):</strong></p>
+<p id="privateKey">Wird geladen...</p>
+
+<p><strong>Public Key (zum Weitergeben an Teilnehmer):</strong></p>
+<p id="publicKey">Wird geladen...</p>
+
+<a href="/index.html">Zurück zur Startseite</a>
+
+<script>
+    // Schlüssel aus URL-Parametern lesen
+    const url = new URL(window.location.href);
+    document.getElementById("privateKey").textContent = url.searchParams.get("private");
+    document.getElementById("publicKey").textContent = url.searchParams.get("public");
+</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Reservierung erstellen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>📝 Neue Reservierung</h1>
+
+  <form id="createForm">
+    <label for="date">📅 Datum:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="startTime">⏰ Startzeit:</label>
+    <input type="time" id="startTime" name="startTime" required>
+
+    <label for="endTime">⏰ Endzeit:</label>
+    <input type="time" id="endTime" name="endTime" required>
+
+    <label for="roomName">🏢 Raum wählen:</label>
+    <select id="roomName" name="roomName">
+      <option value="">-- Bitte wählen --</option>
+      <option value="101">Raum 101</option>
+      <option value="102">Raum 102</option>
+      <option value="103">Raum 103</option>
+      <option value="104">Raum 104</option>
+      <option value="105">Raum 105</option>
+    </select>
+
+    <label for="remark">💬 Bemerkung:</label>
+    <textarea id="remark" name="remark" rows="3" placeholder="z. B. Präsentation, Projektbesprechung..."></textarea>
+
+    <label for="participants">👥 Teilnehmer (durch Komma getrennt):</label>
+    <input type="text" id="participants" name="participants" placeholder="Max, Lisa, Tim" required>
+
+    <button type="submit">Reservierung speichern</button>
+  </form>
+
+  <div id="result" class="success-message"></div>
+
+  <p style="text-align:center; margin-top:30px;">
+    <a href="index.html">🔙 Zurück zur Startseite</a>
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

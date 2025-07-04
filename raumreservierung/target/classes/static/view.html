@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservierung anzeigen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>🔍 Reservierung anzeigen</h1>
+
+    <form id="viewForm">
+        <label for="publicKey">🔑 Public Key:</label>
+        <input type="text" id="publicKey" name="publicKey" placeholder="z. B. öffentlich freigegebener Link-Schlüssel" required>
+        <button type="submit">Anzeigen</button>
+    </form>
+
+    <div id="reservationInfo" style="display: none; margin-top: 30px;">
+        <h2>📋 Reservierungsdetails</h2>
+        <p><strong>📅 Datum:</strong> <span id="resDate"></span></p>
+        <p><strong>⏰ Zeit:</strong> <span id="resTime"></span></p>
+        <p><strong>🏢 Raum:</strong> <span id="resRoom"></span></p>
+        <p><strong>💬 Bemerkung:</strong> <span id="resRemark"></span></p>
+        <p><strong>👥 Teilnehmer:</strong> <span id="resParticipants"></span></p>
+    </div>
+
+    <div id="viewMessage" class="error-message"></div>
+
+    <p style="text-align:center; margin-top:30px;">
+        <a href="index.html">🔙 Zurück zur Startseite</a>
+    </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

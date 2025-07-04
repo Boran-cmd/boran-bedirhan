@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Adminbereich – Alle Reservierungen</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ff007f;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #38384a;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #2e2e40;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🛠️ Adminbereich</h1>
+
+    <form id="filterForm">
+        <label for="filterDate">📅 Reservierungen nach Datum filtern:</label>
+        <input type="date" id="filterDate" name="filterDate">
+        <button type="submit">🔍 Filtern</button>
+        <button type="button" onclick="loadAll()">🔄 Alle anzeigen</button>
+    </form>
+
+    <div id="adminTableSection" style="display: none;">
+        <h2>📋 Gefundene Reservierungen</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Zeit</th>
+                <th>Raum</th>
+                <th>Teilnehmer</th>
+                <th>Bemerkung</th>
+            </tr>
+            </thead>
+            <tbody id="reservationRows">
+            <!-- JavaScript füllt hier die Daten ein -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="adminMessage" class="error-message"></div>
+
+    <p style="text-align:center; margin-top:30px;">
+        <a href="index.html">🔙 Zurück zur Startseite</a>
+    </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

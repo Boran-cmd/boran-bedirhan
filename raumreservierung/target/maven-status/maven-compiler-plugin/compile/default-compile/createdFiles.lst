@@ -1,0 +1,13 @@
+com\beispiel\raumreservierung\DataInitializer.class
+com\beispiel\raumreservierung\model\Participant.class
+com\beispiel\raumreservierung\web\ReservationApiController.class
+com\beispiel\raumreservierung\web\ReservationController.class
+com\beispiel\raumreservierung\web\CodeController.class
+com\beispiel\raumreservierung\web\ReservationCreateDto.class
+com\beispiel\raumreservierung\model\Room.class
+com\beispiel\raumreservierung\repository\RoomRepository.class
+com\beispiel\raumreservierung\model\Reservation.class
+com\beispiel\raumreservierung\RaumreservierungApplication.class
+com\beispiel\raumreservierung\web\ReservationUpdateDto.class
+com\beispiel\raumreservierung\repository\ParticipantRepository.class
+com\beispiel\raumreservierung\repository\ReservationRepository.class

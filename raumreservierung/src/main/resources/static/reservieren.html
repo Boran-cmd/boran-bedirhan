@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservierung erfassen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Neue Reservierung</h1>
+<form action="/reservieren" method="post">
+    <label>Datum (TT.MM.JJJJ):<br>
+        <input type="date" name="date" required>
+    </label><br><br>
+
+    <label>Von (HH:MM):<br>
+        <input type="time" name="startTime" required>
+    </label><br><br>
+
+    <label>Bis (HH:MM):<br>
+        <input type="time" name="endTime" required>
+    </label><br><br>
+
+    <label>Raum (101–105):<br>
+        <input type="number" name="roomNumber" min="101" max="105" required>
+    </label><br><br>
+
+    <label>Bemerkung:<br>
+        <input type="text" name="remark" minlength="10" maxlength="200" required>
+    </label><br><br>
+
+    <label>Teilnehmer (Kommagetrennt):<br>
+        <input type="text" name="participants" required>
+    </label><br><br>
+
+    <button type="submit">Reservieren</button>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

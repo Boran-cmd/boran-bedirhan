@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservierung bearbeiten</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>✏️ Reservierung bearbeiten</h1>
+
+    <form id="loadForm">
+        <label for="privateKey">🔑 Private Key:</label>
+        <input type="text" id="privateKey" name="privateKey" placeholder="Trage deinen privaten Schlüssel ein" required>
+
+        <button type="button" onclick="loadReservation()">Laden</button>
+    </form>
+
+    <form id="editForm" style="display: none; margin-top: 30px;">
+        <label for="date">📅 Datum:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="startTime">⏰ Startzeit:</label>
+        <input type="time" id="startTime" name="startTime" required>
+
+        <label for="endTime">⏰ Endzeit:</label>
+        <input type="time" id="endTime" name="endTime" required>
+
+        <label for="remark">💬 Bemerkung:</label>
+        <textarea id="remark" name="remark" rows="3"></textarea>
+
+        <label for="participants">👥 Teilnehmer (durch Komma getrennt):</label>
+        <input type="text" id="participants" name="participants">
+
+        <button type="submit">Änderungen speichern</button>
+        <button type="button" onclick="deleteReservation()">❌ Löschen</button>
+    </form>
+
+    <div id="editMessage" class="success-message"></div>
+
+    <p style="text-align:center; margin-top:30px;">
+        <a href="index.html">🔙 Zurück zur Startseite</a>
+    </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
